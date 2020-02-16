@@ -68,7 +68,14 @@ namespace AAC_FINAL
         /// <returns></returns>
         public bool Folder_Exists(string path)
         {
-            return Directory.Exists(path);
+            try
+            {
+                return Directory.Exists(path);
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         /// <summary>
@@ -78,7 +85,14 @@ namespace AAC_FINAL
         /// <returns></returns>
         public bool File_Exists(string path)
         {
-            return File.Exists(path);
+            try
+            {
+                return File.Exists(path);
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         /// <summary>
